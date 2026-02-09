@@ -1,6 +1,7 @@
 {
   "include": ["src"],
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
       "@domain/*": ["./src/core/domain/*"],
     },
@@ -25,6 +26,8 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+    "jsx": "react-jsx",
+    "noImplicitAny": false,
   },
 }
