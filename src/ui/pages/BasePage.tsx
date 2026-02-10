@@ -1,5 +1,6 @@
-import Header from "@component/MainPage/Header";
-import Navbar from "@component/MainPage/Navbar";
+import ContentSection from "@component/BasePage/ContentSection";
+import Header from "@component/BasePage/Header";
+import Navbar from "@component/BasePage/Navbar";
 import { Outlet } from "react-router-dom";
 
 export default function BasePage() {
@@ -10,7 +11,9 @@ export default function BasePage() {
           <Header />
           <Navbar />
         </div>
-        <Outlet />
+        <ContentSection>
+          <Outlet />
+        </ContentSection>
       </div>
     </div>
   )

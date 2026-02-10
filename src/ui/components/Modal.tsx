@@ -14,24 +14,24 @@ export default function Modal({ children, title = '', open, onClose, ...props })
     return () => modal?.close();
   })
 
-  if (!open) {
-    return;
-  }
-
   return (
     <>
-      <dialog {...props} ref={dialog}
-        className='w-84 h-64 flex flex-col justify-self-center self-center bg-zinc-950 text-white drop-shadow-2xl/40'>
-        <header className="h-12 p-4" style={{ fontWeight: 700 }}>Hi there</header>
-        <div className="p-4 grow text-center content-center">
-          {children}
-        </div>
-        <footer className="p-4 justify-self-end self-end">
-          <Button className="mr-1">OK</Button>
-          <Button bgColor="bg-zinc-400" onClick={onClose}>Close</Button>
-        </footer>
-      </dialog>
-      <Backdrop />
+      {open && (
+        <>
+          <dialog {...props} ref={dialog}
+            className='w-84 h-64 flex flex-col justify-self-center self-center bg-zinc-950 text-white drop-shadow-2xl/40'>
+            <header className="h-12 p-4" style={{ fontWeight: 700 }}>Hi there</header>
+            <div className="p-4 grow text-center content-center">
+              {children}
+            </div>
+            <footer className="p-4 justify-self-end self-end">
+              <Button className="mr-1">OK</Button>
+              <Button bgColor="bg-zinc-400" onClick={onClose}>Close</Button>
+            </footer>
+          </dialog>
+          <Backdrop />
+        </>
+      )}
     </>
   )
 }
