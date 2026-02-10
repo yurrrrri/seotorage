@@ -1,6 +1,6 @@
-import ContentSection from "./ContentSection";
-import Header from "./Header";
-import Navbar from "./Navbar";
+import ContentSection from "../components/MainPage/ContentSection";
+import Header from "../components/MainPage/Header";
+import Navbar from "../components/MainPage/Navbar";
 
 export default function MainPage() {
   return (

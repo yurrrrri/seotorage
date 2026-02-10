@@ -3,6 +3,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "@ui/*": ["./src/ui/*"],
       "@domain/*": ["./src/core/domain/*"],
     },
 
