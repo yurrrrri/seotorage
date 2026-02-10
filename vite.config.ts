@@ -8,8 +8,8 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: "@ui",
-        replacement: path.resolve(__dirname, "./src/ui"),
+        find: "@component",
+        replacement: path.resolve(__dirname, "./src/ui/components"),
       },
       {
         find: "@domain",

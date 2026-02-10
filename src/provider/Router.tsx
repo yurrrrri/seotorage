@@ -1,8 +1,14 @@
+import BasePage from "../ui/pages/BasePage";
+import SearchPage from "../ui/pages/SearchPage";
 import { createBrowserRouter } from "react-router-dom";
-import MainPage from "@ui/pages/MainPage";
 
 export const Router = createBrowserRouter(
   [
-    { index: true, element: <MainPage /> }
+    {
+      path: "*", element: <BasePage />, children: [
+        { path: 'search', element: <SearchPage /> },
+        { path: 'my', element: <SearchPage /> }
+      ]
+    },
   ]
 )

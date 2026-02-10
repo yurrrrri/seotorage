@@ -1,17 +1,17 @@
-import ContentSection from "../components/MainPage/ContentSection";
-import Header from "../components/MainPage/Header";
-import Navbar from "../components/MainPage/Navbar";
+import Button from "@component/Button";
+import ContentSection from "@component/MainPage/ContentSection";
+import Modal from "@component/Modal";
+import { useState } from "react";
 
 export default function MainPage() {
+  const [open, setOpen] = useState<boolean>(false);
+
   return (
-    <div className='h-screen'>
-      <div className='h-full flex flex-row'>
-        <div className='w-64'>
-          <Header />
-          <Navbar />
-        </div>
-        <ContentSection />
-      </div>
-    </div>
+    <ContentSection>
+      <Button onClick={() => setOpen(true)}>OPEN</Button>
+      <Modal open={open} onClose={() => setOpen(false)}>
+        <span>Hi, I'm modal.</span>
+      </Modal>
+    </ContentSection>
   )
 }
