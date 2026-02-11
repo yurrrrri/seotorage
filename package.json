@@ -20,13 +20,15 @@
     "vite": "^7.2.4"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "@hookform/error-message": "^2.0.1",
     "@hookform/resolvers": "^5.2.2",
+    "@tailwindcss/vite": "^4.1.18",
+    "@tailwindplus/elements": "^1.0.22",
     "@types/node": "^25.0.8",
     "axios": "^1.13.2",
     "dayjs": "^1.11.19",
     "jotai": "^2.16.2",
-    "jotai-devtools": "^0.13.0",
     "lodash": "^4.17.21",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",

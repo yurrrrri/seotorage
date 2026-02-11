@@ -1,7 +1,9 @@
 {
   "include": ["src"],
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
+      "@component/*": ["./src/ui/components/*"],
       "@domain/*": ["./src/core/domain/*"],
     },
 
@@ -25,6 +27,8 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+    "jsx": "react-jsx",
+    "noImplicitAny": false,
   },
 }
