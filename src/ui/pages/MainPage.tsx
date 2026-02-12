@@ -6,11 +6,11 @@ export function MainPage() {
   const [open, setOpen] = useState<boolean>(false);
 
   return (
-    <>
-      <Button onClick={() => setOpen(true)}>OPEN</Button>
+    <main>
+      <Button type="button" onClick={() => setOpen(true)}>OPEN</Button>
       <Modal open={open} onClose={() => setOpen(false)}>
         <span>Hi, I'm modal.</span>
       </Modal>
-    </>
+    </main>
   )
 }

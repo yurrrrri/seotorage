@@ -10,8 +10,6 @@ export default function Modal({ children, title = '', open, onClose, ...props })
     if (open && !!modal) {
       modal.showModal();
     }
-
-    return () => modal?.close();
   })
 
   return (
@@ -19,14 +17,18 @@ export default function Modal({ children, title = '', open, onClose, ...props })
       {open && (
         <>
           <dialog {...props} ref={dialog}
+            onClose={onClose}
             className='w-84 h-64 flex flex-col justify-self-center self-center bg-zinc-950 text-white drop-shadow-2xl/40'>
-            <header className="h-12 p-4" style={{ fontWeight: 700 }}>Hi there</header>
+            <header className="h-12 p-4 w-full" style={{ fontWeight: 700 }}>
+              <span>{title}</span>
+              <div className="justify-self-end cursor-pointer" onClick={onClose}>X</div>
+            </header>
             <div className="p-4 grow text-center content-center">
               {children}
             </div>
             <footer className="p-4 justify-self-end self-end">
-              <Button className="mr-1">OK</Button>
-              <Button bgColor="bg-zinc-400" onClick={onClose}>Close</Button>
+              <Button type="button" className="mr-1">OK</Button>
+              <Button type="button" bgColor="bg-zinc-400 hover:bg-zinc-500" onClick={onClose}>Close</Button>
             </footer>
           </dialog>
           <Backdrop />
