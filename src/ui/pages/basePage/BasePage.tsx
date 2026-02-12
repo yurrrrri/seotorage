@@ -1,7 +1,7 @@
-import ContentSection from "@component/BasePage/ContentSection";
-import Header from "@component/BasePage/Header";
-import Navbar from "@component/BasePage/Navbar";
 import { Outlet } from "react-router-dom";
+import Header from "./Header";
+import Navbar from "./Navbar";
+import ContentSection from "./ContentSection";
 
 export function BasePage() {
   return (
