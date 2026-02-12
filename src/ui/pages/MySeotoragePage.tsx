@@ -1,3 +1,3 @@
-export default function MySeotoragePage() {
+export function MySeotoragePage() {
   return <div>This is my seotorage page.</div>
 }

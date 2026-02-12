@@ -2,7 +2,7 @@ import Button from "@component/Button";
 import Modal from "@component/Modal";
 import { useState } from "react";
 
-export default function MainPage() {
+export function MainPage() {
   const [open, setOpen] = useState<boolean>(false);
 
   return (

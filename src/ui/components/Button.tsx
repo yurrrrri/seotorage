@@ -4,7 +4,7 @@ export default function Button({ children, bgColor = '', className = '', ...prop
   if (!!bgColor) {
     classNames += bgColor;
   } else {
-    classNames += "bg-indigo-800";
+    classNames += "bg-indigo-800 hover:bg-indigo-900";
   }
 
   if (!!className) {
@@ -16,6 +16,7 @@ export default function Button({ children, bgColor = '', className = '', ...prop
       {...props}
       type="button"
       className={classNames}
+      style={{ cursor: 'pointer' }}
     >
       {children}
     </button>
