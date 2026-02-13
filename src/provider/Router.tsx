@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { BasePage, MainPage, MySeotoragePage, SearchPage, SettingsPage, WritePage } from "../ui/pages";
+import { BasePage, EditPage, MainPage, MySeotoragePage, SearchPage, SettingsPage, WritePage } from "../ui/pages";
 
 export const Router = createBrowserRouter(
   [
@@ -9,7 +9,8 @@ export const Router = createBrowserRouter(
         { path: 'search', element: <SearchPage /> },
         { path: 'my', element: <MySeotoragePage /> },
         { path: 'settings', element: <SettingsPage /> },
-        { path: 'write/:bookId', element: <WritePage /> }
+        { path: 'write/:bookId', element: <WritePage /> },
+        { path: 'edit/:contentId', element: <EditPage /> },
       ]
     },
   ]

@@ -11,7 +11,7 @@ export function BookDetail({ book }) {
           <span>{book.author}</span>
           <span>{book.publisher} | {dayjs(book.pubDate).format("YYYY.MM.DD")}</span>
         </div>
-        <p className='max-w-[480px] mt-6 ml-4' style={{ lineHeight: 1.3 }}>{book.description}</p>
+        <p className='max-w-[480px] mt-8 ml-4' style={{ lineHeight: 1.3 }}>{book.description}</p>
       </div>
     </div>
   )

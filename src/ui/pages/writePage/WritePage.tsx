@@ -1,10 +1,10 @@
 import type { Book } from "@domain/Book";
 import { Link, useParams } from "react-router-dom"
 import Button from "@component/Button";
-import { ContentWrite } from "@component/ContentWrite";
 import { BookNotFound } from "./BookNotFound";
 import { BookDetail } from "./BookDetail";
 import { BookSearchList } from "../../../core/testData/search-sample";
+import { ContentWrite } from "./ContentWrite";
 
 export function WritePage() {
   const { bookId } = useParams();

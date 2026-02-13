@@ -92,7 +92,7 @@ time, mark, audio, video {
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+footer, header, hgroup, menu, nav {
 	display: block;
 }
 body {
@@ -113,4 +113,11 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+input[type='file'] {
+  font-size: 0; /* 텍스트 숨김 */
+}
+input[type="file"]::file-selector-button {
+  display: none;
 }

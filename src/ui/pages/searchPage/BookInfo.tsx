@@ -4,7 +4,7 @@ export function BookInfo({ book }) {
   const navigate = useNavigate();
 
   return (
-    <div key={book.id} className="flex flex-row px-2 py-3 min-w-42 min-h-[190px] rounded-sm shadow-sm/20 border border-zinc-200 cursor-pointer hover:bg-[#f8faff]"
+    <div className="flex flex-row px-2 py-3 min-w-42 min-h-[190px] rounded-sm shadow-sm/20 border border-zinc-200 cursor-pointer hover:bg-[#f8faff]"
       onClick={() => navigate(`/write/${book.id}`)}
       style={{ fontSize: 13, lineHeight: 1.2 }}>
       <img src={book.coverImage} style={{ minWidth: 110, height: 162 }} />
