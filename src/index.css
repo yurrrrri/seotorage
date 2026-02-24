@@ -96,8 +96,14 @@ footer, header, hgroup, menu, nav {
 	display: block;
 }
 body {
-	line-height: 1;
+    background-color: slategray;
+    line-height: 1;
 	font-family: 'Suit';
+}
+#root {
+    margin: auto;
+    background-color: white;
+    width: 414px !important;
 }
 ol, ul {
 	list-style: none;

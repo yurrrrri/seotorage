@@ -17,8 +17,8 @@ export function ContentWrite() {
   const { form, handleChange } = useContentWrite();
 
   return (
-    <Form form={form} className="py-4 mt-4 grid grid-cols-2 gap-4">
-      <label className="bg-zinc-100 h-52 mb-4 rounded-sm flex justify-center items-center cursor-pointer">
+    <Form form={form} className="my-4">
+      <label className="bg-zinc-50 h-52 mb-4 rounded-sm flex justify-center items-center cursor-pointer">
         ➕
         <FormItem name="thumbnail">
           <input type="file" accept={acceptable} multiple={false} onChange={handleChange} />
@@ -28,6 +28,7 @@ export function ContentWrite() {
         <FormItem name="pageNumber">
           <input type='number' required placeholder="pages" min={0} className={`max-w-24 h-8 p-2 ${borderCn}`} />
         </FormItem>
+        <span className="ml-2">pages</span>
         <FormItem name="sentence">
           <textarea className={`w-full min-h-28 mt-2 p-2 ${borderCn}`} maxLength={500}
             placeholder="Up to 500 characters can be entered" onChange={e => setSentenceLength(e.target.value.length)} />
