@@ -5,12 +5,12 @@ import ContentSection from "./ContentSection";
 
 export function BasePage() {
   return (
-    <div className='min-h-screen flex flex-col'>
+    <div className="min-h-screen flex flex-col">
       <Header />
       <ContentSection>
         <Outlet />
       </ContentSection>
       <Navbar />
     </div>
-  )
+  );
 }

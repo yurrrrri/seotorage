@@ -1,3 +1,3 @@
 export function MySeotoragePage() {
-  return <div>This is my seotorage page.</div>
+  return <div>This is my seotorage page.</div>;
 }
